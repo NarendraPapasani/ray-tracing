@@ -12,9 +12,25 @@ Before running the project, ensure you have the following installed on your mach
    ```bash
    cargo install wasm-pack
    ```
-4. **Redis**: An in-memory data store used by the server. 
-   - On Linux (Ubuntu/Debian): `sudo apt install redis-server` and start it with `sudo systemctl start redis-server`
-   - Alternatively, you can run Redis via Docker: `docker run -p 6379:6379 -d redis`
+4. **Redis**: An in-memory data store used by the server.
+   - **Linux (Ubuntu/Debian)**: 
+     ```bash
+     sudo apt install redis-server
+     sudo systemctl start redis-server
+     ```
+   - **macOS**: Install via [Homebrew](https://brew.sh/):
+     ```bash
+     brew install redis
+     brew services start redis
+     ```
+   - **Windows**: Redis is not officially supported natively. It is recommended to use **Windows Subsystem for Linux (WSL2)** and follow the Linux instructions above, or use **Docker Desktop**:
+     ```bash
+     docker run -p 6379:6379 -d redis
+     ```
+   - **Docker (Any OS)**:
+     ```bash
+     docker run -p 6379:6379 -d redis
+     ```
 
 ## How to Run the Project
 
